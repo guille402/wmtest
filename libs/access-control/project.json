@@ -1,0 +1,21 @@
+{
+  "name": "access-control",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/access-control/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/access-control",
+        "main": "libs/access-control/src/index.ts",
+        "tsConfig": "libs/access-control/tsconfig.lib.json",
+        "assets": ["libs/access-control/*.md"],
+        "format": ["cjs"],
+        "generatePackageJson": true
+      }
+    }
+  }
+}
